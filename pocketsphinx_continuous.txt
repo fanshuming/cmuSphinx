@@ -1,1 +1,3 @@
 pocketsphinx_continuous -inmic yes -hmm "command.ci_cont/" -dict command.dic  -vad_postspeech 50 -vad_prespeech 30 -vad_startspeech 10 -vad_threshold 3.0 -remove_noise yes -jsgf command.jsgf  -silprob  0.1 -wip 1e-4 -bestpath 0
+
+./pocketsphinx_continuous -inmic yes -hmm "command.ci_cont/" -dict command.dic  -vad_postspeech 80 -vad_prespeech 40 -vad_startspeech 5 -vad_threshold 4.0 -remove_noise yes -jsgf command.jsgf  -silprob  0.1 -wip 1e-4 -bestpath 0
