@@ -1,0 +1,5 @@
+#JSGF V1.0;
+
+grammar command;
+
+public <command> = (座椅关闭 | 头部关闭 | 头部打开 | 座椅打开| 记忆位置 | 复位 | 停止 | 停下来);

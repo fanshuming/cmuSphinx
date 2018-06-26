@@ -1,0 +1,124 @@
+ERROR: "cmd_ln.c", line 682: No arguments given, available options are:
+Arguments list definition:
+[NAME]			[DEFLT]		[DESCR]
+-adcdev					Name of audio device to use for input.
+-agc			none		Automatic gain control for c0 ('max', 'emax', 'noise', or 'none')
+-agcthresh		2.0		Initial threshold for automatic gain control
+-allphone				Perform phoneme decoding with phonetic lm
+-allphone_ci		no		Perform phoneme decoding with phonetic lm and context-independent units only
+-alpha			0.97		Preemphasis parameter
+-argfile				Argument file giving extra arguments.
+-ascale			20.0		Inverse of acoustic model scale for confidence score calculation
+-aw			1		Inverse weight applied to acoustic scores.
+-backtrace		no		Print results and backtraces to log.
+-beam			1e-48		Beam width applied to every frame in Viterbi search (smaller values mean wider beam)
+-bestpath		yes		Run bestpath (Dijkstra) search over word lattice (3rd pass)
+-bestpathlw		9.5		Language model probability weight for bestpath search
+-ceplen			13		Number of components in the input feature vector
+-cmn			live		Cepstral mean normalization scheme ('live', 'batch', or 'none')
+-cmninit		40,3,-1		Initial values (comma-separated) for cepstral mean when 'live' is used
+-compallsen		no		Compute all senone scores in every frame (can be faster when there are many senones)
+-debug					Verbosity level for debugging messages
+-dict					Main pronunciation dictionary (lexicon) input file
+-dictcase		no		Dictionary is case sensitive (NOTE: case insensitivity applies to ASCII characters only)
+-dither			no		Add 1/2-bit noise
+-doublebw		no		Use double bandwidth filters (same center freq)
+-ds			1		Frame GMM computation downsampling ratio
+-fdict					Noise word pronunciation dictionary input file
+-feat			1s_c_d_dd	Feature stream type, depends on the acoustic model
+-featparams				File containing feature extraction parameters.
+-fillprob		1e-8		Filler word transition probability
+-frate			100		Frame rate
+-fsg					Sphinx format finite state grammar file
+-fsgusealtpron		yes		Add alternate pronunciations to FSG
+-fsgusefiller		yes		Insert filler words at each state.
+-fwdflat		yes		Run forward flat-lexicon search over word lattice (2nd pass)
+-fwdflatbeam		1e-64		Beam width applied to every frame in second-pass flat search
+-fwdflatefwid		4		Minimum number of end frames for a word to be searched in fwdflat search
+-fwdflatlw		8.5		Language model probability weight for flat lexicon (2nd pass) decoding
+-fwdflatsfwin		25		Window of frames in lattice to search for successor words in fwdflat search 
+-fwdflatwbeam		7e-29		Beam width applied to word exits in second-pass flat search
+-fwdtree		yes		Run forward lexicon-tree search (1st pass)
+-hmm					Directory containing acoustic model files.
+-infile					Audio file to transcribe.
+-inmic			no		Transcribe audio from microphone.
+-input_endian		little		Endianness of input data, big or little, ignored if NIST or MS Wav
+-jsgf					JSGF grammar file
+-keyphrase				Keyphrase to spot
+-kws					A file with keyphrases to spot, one per line
+-kws_delay		10		Delay to wait for best detection score
+-kws_plp		1e-1		Phone loop probability for keyphrase spotting
+-kws_threshold		1		Threshold for p(hyp)/p(alternatives) ratio
+-latsize		5000		Initial backpointer table size
+-lda					File containing transformation matrix to be applied to features (single-stream features only)
+-ldadim			0		Dimensionality of output of feature transformation (0 to use entire matrix)
+-lifter			0		Length of sin-curve for liftering, or 0 for no liftering.
+-lm					Word trigram language model input file
+-lmctl					Specify a set of language model
+-lmname					Which language model in -lmctl to use by default
+-logbase		1.0001		Base in which all log-likelihoods calculated
+-logfn					File to write log messages in
+-logspec		no		Write out logspectral files instead of cepstra
+-lowerf			133.33334	Lower edge of filters
+-lpbeam			1e-40		Beam width applied to last phone in words
+-lponlybeam		7e-29		Beam width applied to last phone in single-phone words
+-lw			6.5		Language model probability weight
+-maxhmmpf		30000		Maximum number of active HMMs to maintain at each frame (or -1 for no pruning)
+-maxwpf			-1		Maximum number of distinct word exits at each frame (or -1 for no pruning)
+-mdef					Model definition input file
+-mean					Mixture gaussian means input file
+-mfclogdir				Directory to log feature files to
+-min_endfr		0		Nodes ignored in lattice construction if they persist for fewer than N frames
+-mixw					Senone mixture weights input file (uncompressed)
+-mixwfloor		0.0000001	Senone mixture weights floor (applied to data from -mixw file)
+-mllr					MLLR transformation to apply to means and variances
+-mmap			yes		Use memory-mapped I/O (if possible) for model files
+-ncep			13		Number of cep coefficients
+-nfft			512		Size of FFT
+-nfilt			40		Number of filter banks
+-nwpen			1.0		New word transition penalty
+-pbeam			1e-48		Beam width applied to phone transitions
+-pip			1.0		Phone insertion penalty
+-pl_beam		1e-10		Beam width applied to phone loop search for lookahead
+-pl_pbeam		1e-10		Beam width applied to phone loop transitions for lookahead
+-pl_pip			1.0		Phone insertion penalty for phone loop
+-pl_weight		3.0		Weight for phoneme lookahead penalties
+-pl_window		5		Phoneme lookahead window size, in frames
+-rawlogdir				Directory to log raw audio files to
+-remove_dc		no		Remove DC offset from each frame
+-remove_noise		yes		Remove noise with spectral subtraction in mel-energies
+-remove_silence		yes		Enables VAD, removes silence frames from processing
+-round_filters		yes		Round mel filter frequencies to DFT points
+-samprate		16000		Sampling rate
+-seed			-1		Seed for random number generator; if less than zero, pick our own
+-sendump				Senone dump (compressed mixture weights) input file
+-senlogdir				Directory to log senone score files to
+-senmgau				Senone to codebook mapping input file (usually not needed)
+-silprob		0.005		Silence word transition probability
+-smoothspec		no		Write out cepstral-smoothed logspectral files
+-svspec					Subvector specification (e.g., 24,0-11/25,12-23/26-38 or 0-12/13-25/26-38)
+-time			no		Print word times in file transcription.
+-tmat					HMM state transition matrix input file
+-tmatfloor		0.0001		HMM state transition probability floor (applied to -tmat file)
+-topn			4		Maximum number of top Gaussians to use in scoring.
+-topn_beam		0		Beam width used to determine top-N Gaussians (or a list, per-feature)
+-toprule				Start rule for JSGF (first public rule is default)
+-transform		legacy		Which type of transform to use to calculate cepstra (legacy, dct, or htk)
+-unit_area		yes		Normalize mel filters to unit area
+-upperf			6855.4976	Upper edge of filters
+-uw			1.0		Unigram weight
+-vad_postspeech		50		Num of silence frames to keep after from speech to silence.
+-vad_prespeech		20		Num of speech frames to keep before silence to speech.
+-vad_startspeech	10		Num of speech frames to trigger vad from silence to speech.
+-vad_threshold		2.0		Threshold for decision between noise and silence frames. Log-ratio between signal level and noise level.
+-var					Mixture gaussian variances input file
+-varfloor		0.0001		Mixture gaussian variance floor (applied to data from -var file)
+-varnorm		no		Variance normalize each utterance (only if CMN == current)
+-verbose		no		Show input filenames
+-warp_params				Parameters defining the warping function
+-warp_type		inverse_linear	Warping function type (or shape)
+-wbeam			7e-29		Beam width applied to word exits
+-wip			0.65		Word insertion penalty
+-wlen			0.025625	Hamming window length
+
+INFO: continuous.c(542): Specify '-infile <file.wav>' to recognize from file or '-inmic yes' to recognize from microphone.
